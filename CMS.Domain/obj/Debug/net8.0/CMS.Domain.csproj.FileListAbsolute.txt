@@ -1,0 +1,12 @@
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\bin\Debug\net8.0\CMS.Domain.deps.json
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\bin\Debug\net8.0\CMS.Domain.dll
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\bin\Debug\net8.0\CMS.Domain.pdb
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.AssemblyInfoInputs.cache
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.AssemblyInfo.cs
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.dll
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\refint\CMS.Domain.dll
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.pdb
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\ref\CMS.Domain.dll
+C:\Users\Kier\CMS\CMS.Domain\CMS.Domain\obj\Debug\net8.0\CMS.Domain.csproj.AssemblyReference.cache
