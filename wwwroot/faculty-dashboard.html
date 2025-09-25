@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Faculty Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f1f8e9;
+        }
+
+        .header {
+            background: #388e3c;
+            color: #fff;
+        }
+
+        .table-header {
+            background: #c8e6c9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header p-6 text-2xl font-bold">Library Faculty Dashboard</div>
+    <div class="p-8">
+        <h2 class="text-xl font-semibold mb-4">Student Clearance Applications</h2>
+        <table class="w-full border">
+            <thead>
+                <tr class="table-header">
+                    <th class="p-2">Student Name</th>
+                    <th class="p-2">Student Number</th>
+                    <th class="p-2">Course</th>
+                    <th class="p-2">Year</th>
+                    <th class="p-2">Section</th>
+                    <th class="p-2">Status</th>
+                </tr>
+            </thead>
+            <tbody id="applicationsTableBody">
+            </tbody>
+        </table>
+    </div>
+    <script>async function loadApplications() {
+            const res = await fetch('/api/faculty/library/applications');
+            if (!res.ok) return;
+            const data = await res.json();
+            const tbody = document.getElementById('applicationsTableBody');
+            tbody.innerHTML = '';
+            data.forEach(app => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td class="p-2">${app.firstName} ${app.lastName}</td>
+                        <td class="p-2">${app.studentNumber}</td>
+                        <td class="p-2">${app.course}</td>
+                        <td class="p-2">${app.yearLevel}</td>
+                        <td class="p-2">${app.section}</td>
+                        <td class="p-2">${app.libraryStatus || 'Pending'}</td>
+                    </tr>
+                `;
+            });
+        }
+        loadApplications();</script>
+</body>
+</html>

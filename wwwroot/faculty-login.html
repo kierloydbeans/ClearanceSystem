@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Login - Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #e3f2fd;
+        }
+
+        .login-box {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px #90caf9;
+        }
+
+        .btn-primary {
+            background: #1976d2;
+        }
+
+            .btn-primary:hover {
+                background: #1565c0;
+            }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="login-box p-8 w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-[#1976d2]">Library Faculty Login</h2>
+        <form id="facultyLoginForm" class="space-y-4">
+            <div>
+                <label class="block font-semibold mb-1" for="username">Username</label>
+                <input class="w-full border rounded px-3 py-2" type="text" id="username" required>
+            </div>
+            <div>
+                <label class="block font-semibold mb-1" for="password">Password</label>
+                <input class="w-full border rounded px-3 py-2" type="password" id="password" required>
+            </div>
+            <button type="submit" class="btn-primary text-white w-full py-2 rounded font-bold">Login</button>
+            <div id="loginMessage" class="text-center mt-4 text-red-600 hidden"></div>
+        </form>
+    </div>
+    <script>document.getElementById('facultyLoginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const loginMessage = document.getElementById('loginMessage');
+            loginMessage.classList.add('hidden');
+            const response = await fetch('/api/faculty/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+            if (response.ok) {
+                window.location.href = '/faculty-dashboard.html';
+            } else {
+                loginMessage.textContent = 'Invalid credentials';
+                loginMessage.classList.remove('hidden');
+            }
+        });</script>
+</body>
+</html>

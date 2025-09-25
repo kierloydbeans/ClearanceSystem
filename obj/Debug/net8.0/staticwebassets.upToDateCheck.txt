@@ -1,0 +1,6 @@
+wwwroot\dashboard.html
+wwwroot\faculty-dashboard.html
+wwwroot\faculty-login.html
+wwwroot\index.html
+wwwroot\register.html
+wwwroot\ucc.png
